@@ -11,7 +11,7 @@ def sendemails():
 	type(smtpObj)
 #smtpObj.ehlo()
 	smtpObj.starttls()
-	smtpObj.login('me@gmail.com', 'mypassword')
+	smtpObj.login('me@myemail.com', 'mypassword')
 	smtpObj.sendmail(me, you , msg.as_string())
 	smtpObj.quit()
 # me == my email address
@@ -22,8 +22,8 @@ you = "you@gorannet.net"
 # Create message container - the correct MIME type is multipart/alternative.
 msg = MIMEMultipart('alternative')
 msg['Subject'] = "Warehouse shortage"
-msg['From'] = me
-msg['To'] = you
+msg['From'] = me@youremail.com
+msg['To'] = you@youremail.com
 
 
 #----------
